@@ -1,0 +1,32 @@
+{
+  "name": "@serious",
+  "version": "1.87.0",
+  "description": "Serious shared modules and models",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": "Adadgio <adadgio@github.com>",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "tslint --project \"./tsconfig.json\"",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "commit": "git add -A && git commit -m \"Npm pre-publish commit\"",
+    "publish:updates": "npm run build && npm run commit && npm version minor && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adadgio/serious-shared"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.15.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {}
+}
